@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap");
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --main-font: "DynaPuff", system-ui;
+  --main-color: #0757cc;
+}
