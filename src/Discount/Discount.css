@@ -1,0 +1,20 @@
+.discount-text-overlay {
+  position: relative;
+  bottom: 750px;
+  left: 5%;
+}
+
+.discount-text-overlay h1 {
+  font-family: var(--main-font);
+  font-size: 3.5rem;
+  color: var(--main-color);
+}
+
+.discount-text-overlay p {
+  font-family: var(--main-font);
+  color: var(--main-color);
+}
+
+.service__discount p {
+  margin-bottom: 20px;
+}
