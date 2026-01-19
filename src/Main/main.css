@@ -114,3 +114,52 @@
   border: 2px solid transparent;
   color: var(--main-color);
 }
+
+/* Find store */
+
+.find-store-section {
+  position: relative;
+  bottom: 400px;
+  text-align: center;
+  font-family: var(--main-font);
+  color: var(--main-color);
+}
+
+.find-store-section h1 {
+  margin-bottom: 20px;
+  font-size: 3rem;
+}
+
+.find-store-section p {
+  font-size: 1.2rem;
+  margin-bottom: 90px;
+}
+
+.find-store-section a {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+.find-store-section a:hover {
+  background-color: #fff;
+  border: 2px solid var(--main-color);
+  color: var(--main-color);
+}
+
+/* Logo stores */
+
+.logo-store {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 200px;
+  bottom: 300px;
+}
+
+/* snacking-is-looking-up */
+
+.snacking-is-looking-up {
+  position: relative;
+  bottom: 180px;
+}

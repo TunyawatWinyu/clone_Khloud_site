@@ -1,0 +1,176 @@
+footer {
+  font-family: var(--main-font);
+  color: var(--main-color);
+  background: linear-gradient(to bottom, white, rgb(149, 225, 255));
+  padding-bottom: 50px;
+}
+
+/* pre footer */
+
+.pre-footer {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 30px;
+  margin: auto 90px;
+}
+
+.dots {
+  margin: 10px auto;
+}
+
+/* footer */
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  margin: auto 190px;
+}
+
+.footer-message {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-message .heart {
+  position: relative;
+  left: 6%;
+  width: 40px;
+}
+
+.footer-message .signature {
+  position: relative;
+  right: 6%;
+  width: 150px;
+}
+
+.footer-message h2 {
+  position: relative;
+  right: 24%;
+  top: 25px;
+  font-size: 1.5rem;
+}
+
+/* popcorn section */
+.popcorn-section p {
+  font-size: 1.5rem;
+}
+.popcorn-section a {
+  position: relative;
+  color: var(--main-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.popcorn-section a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--main-color);
+  transition: width 0.3s ease;
+}
+
+.popcorn-section a:hover::after {
+  width: 100%;
+}
+
+/* about-us-section */
+.about-us-section p {
+  font-size: 1.5rem;
+}
+.about-us-section a {
+  position: relative;
+  color: var(--main-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.about-us-section a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--main-color);
+  transition: width 0.3s ease;
+}
+
+.about-us-section a:hover::after {
+  width: 100%;
+}
+
+/* support-section  */
+
+.support-section p {
+  font-size: 1.5rem;
+}
+
+.support-section a {
+  position: relative;
+  color: var(--main-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.support-section a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--main-color);
+  transition: width 0.3s ease;
+}
+
+.support-section a:hover::after {
+  width: 100%;
+}
+
+/* Social section */
+
+.social-section p {
+  font-size: 1.2rem;
+}
+
+/* form */
+
+form {
+  font-family: var(--main-font);
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  background-color: #fff;
+  color: var(--main-color);
+  margin: 20px auto;
+}
+
+.button-input-form {
+  padding: 10px 20px;
+  border: solid transparent 2px;
+  background-color: #fff;
+  color: var(--main-color);
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.button-subscribe-form {
+  padding: 10px 20px;
+  border: solid transparent 2px;
+  background-color: var(--main-color);
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.button-subscribe-form:hover {
+  background-color: transparent;
+  border: solid var(--main-color) 2px;
+  color: var(--main-color);
+}
