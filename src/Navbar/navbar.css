@@ -1,3 +1,8 @@
+.nav-mobile,
+.nav-tablet {
+  display: none;
+}
+
 .top-nav {
   font-family: var(--main-font);
   display: flex;
@@ -18,7 +23,11 @@
   text-decoration: underline;
 }
 
-nav {
+.nav-mobile {
+  display: none;
+}
+
+.nav-desktop {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -83,7 +92,9 @@ a {
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
   pointer-events: none;
   background-color: #fff;
   border-radius: 14px;
@@ -229,4 +240,294 @@ li {
 .button:hover {
   background-color: var(--main-color);
   color: #fff;
+}
+
+/* responsive */
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .nav-desktop {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: none;
+  }
+
+  .nav-tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-bars-left-tablet {
+    cursor: pointer;
+  }
+
+  .mobile-head-action-tablet a {
+    margin: 0 5px;
+  }
+
+  .logo-tablet a {
+    position: relative;
+    font-size: 1.7rem;
+    left: 45px;
+  }
+
+  /* OPEN */
+
+  .hamburger-subMenu-tablet {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    background: #fff;
+
+    transform: translateX(-100%);
+    transition: transform 0.2s ease;
+    z-index: 1000;
+  }
+
+  .hamburger-subMenu-tablet.open {
+    transform: translateX(0);
+  }
+
+  /* SHOP PROTEIN LIST */
+  .shop-protein-popcorn-list-tablet {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: solid 2px var(--main-color);
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    transform: translateX(-100%);
+    pointer-events: none;
+    transition: trasform 0.2s ease;
+    z-index: 100;
+  }
+
+  .shop-protein-popcorn-list-tablet.open-shop {
+    width: 500px;
+    left: 340px;
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+
+  .back-and-close-tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+
+  .shop-protein-popcorn-list-tablet ul {
+    margin: 20px 30px;
+  }
+
+  .hamburger-subMenu-inner-tablet {
+    margin: auto 20px;
+  }
+
+  .close-button-tablet {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+  }
+
+  .find-button-tablet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+  }
+
+  .find-button-hamburger-tablet {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    white-space: nowrap;
+    border: solid 2px var(--main-color);
+    padding: 0.6em 5em;
+    border-radius: 40px;
+    box-sizing: border-box;
+  }
+
+  .section-1-tablet {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-1-tablet a {
+    margin: 10px 0;
+    transition: color 0.3s ease;
+  }
+
+  .section-1-tablet a:hover {
+    color: gray;
+  }
+
+  .shop-protein-popcorn-angle-tablet {
+    font-family: var(--main-font);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--main-color);
+    transition: color 0.3s ease;
+  }
+
+  .shop-protein-popcorn-angle-tablet:hover {
+    color: gray;
+  }
+
+  .diveder-tablet {
+    margin: 20px 0;
+    background-color: var(--main-color);
+    padding: 0.6px 20px;
+  }
+
+  .section-2-tablet a {
+    margin: 10px 0;
+    transition: color 0.3s ease;
+  }
+
+  .section-2-tablet a:hover {
+    color: gray;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 704px) {
+  .nav-desktop {
+    display: none;
+  }
+  .nav-tablet {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-bars-left {
+    cursor: pointer;
+  }
+
+  .mobile-head-action a {
+    margin: 0 5px;
+  }
+
+  .logo-mobile a {
+    position: relative;
+    font-size: 1.7rem;
+    left: 45px;
+  }
+
+  /* OPEN */
+
+  .hamburger-subMenu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    height: 100%;
+    background: #fff;
+
+    transform: translateY(100%);
+    transition: transform 0.2s ease;
+    z-index: 1000;
+  }
+
+  .hamburger-subMenu.open {
+    transform: translateY(0);
+  }
+
+  .hamburger-subMenu-inner {
+    margin: auto 20px;
+  }
+
+  .close-button {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+  }
+
+  .find-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px auto;
+  }
+
+  .find-button-hamburger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    white-space: nowrap;
+    border: solid 2px var(--main-color);
+    padding: 0.6em 10em;
+    border-radius: 40px;
+    box-sizing: border-box;
+  }
+
+  .section-1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-1 a {
+    margin: 10px 0;
+    transition: color 0.3s ease;
+  }
+
+  .section-1 a:hover {
+    color: gray;
+  }
+
+  .shop-protein-popcorn-angle {
+    font-family: var(--main-font);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--main-color);
+    transition: color 0.3s ease;
+  }
+
+  .shop-protein-popcorn-angle:hover {
+    color: gray;
+  }
+  .shop-protein-popcorn-list {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    transform: translateX(100%);
+    transition: trasform 0.4s ease;
+    z-index: 1000;
+  }
+
+  .diveder {
+    margin: 20px 0;
+    background-color: var(--main-color);
+    padding: 0.6px 20px;
+  }
+
+  .section-2 a {
+    margin: 10px 0;
+    transition: color 0.3s ease;
+  }
+
+  .section-2 a:hover {
+    color: gray;
+  }
 }
