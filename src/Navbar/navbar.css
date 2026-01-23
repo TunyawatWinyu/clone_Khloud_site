@@ -242,8 +242,6 @@ li {
   color: #fff;
 }
 
-/* responsive */
-
 /* TABLET */
 @media (max-width: 1024px) {
   .nav-desktop {
@@ -295,22 +293,22 @@ li {
 
   /* SHOP PROTEIN LIST */
   .shop-protein-popcorn-list-tablet {
-    position: absolute;
+    display: flex;
     top: 0;
     left: 0;
     border-left: solid 2px var(--main-color);
     width: 100%;
     height: 100vh;
     background: #fff;
-    transform: translateX(-100%);
+    transform: translateX(-640px);
     pointer-events: none;
     transition: trasform 0.2s ease;
     z-index: 100;
   }
 
   .shop-protein-popcorn-list-tablet.open-shop {
-    width: 500px;
-    left: 340px;
+    width: 90%;
+    left: 100%;
     transform: translateX(0);
     pointer-events: auto;
   }
@@ -333,7 +331,6 @@ li {
   .close-button-tablet {
     display: flex;
     justify-content: flex-end;
-    margin-top: 30px;
   }
 
   .find-button-tablet {
@@ -399,7 +396,7 @@ li {
 }
 
 /* MOBILE */
-@media (max-width: 704px) {
+@media (max-width: 662px) {
   .nav-desktop {
     display: none;
   }
@@ -413,15 +410,15 @@ li {
     align-items: center;
   }
 
-  .nav-bars-left {
+  .nav-bars-left-mobile {
     cursor: pointer;
   }
 
-  .mobile-head-action a {
+  .mobile-head-action-mobile a {
     margin: 0 5px;
   }
 
-  .logo-mobile a {
+  .logo-mobile-mobile a {
     position: relative;
     font-size: 1.7rem;
     left: 45px;
@@ -429,15 +426,15 @@ li {
 
   /* OPEN */
 
-  .hamburger-subMenu {
+  .hamburger-subMenu-mobile {
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
-    max-width: 1200px;
+    height: 100%;
+    max-width: 420px;
     margin: 0 auto;
     padding: 0 1rem;
-    height: 100%;
     background: #fff;
 
     transform: translateY(100%);
@@ -445,28 +442,27 @@ li {
     z-index: 1000;
   }
 
-  .hamburger-subMenu.open {
+  .hamburger-subMenu-mobile.open-mobile {
     transform: translateY(0);
   }
 
-  .hamburger-subMenu-inner {
+  .hamburger-subMenu-inner-mobile {
     margin: auto 20px;
   }
-
-  .close-button {
+  .close-button-mobile {
     display: flex;
     justify-content: flex-end;
     margin-top: 30px;
   }
 
-  .find-button {
+  .find-button-mobile {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 30px auto;
   }
 
-  .find-button-hamburger {
+  .find-button-hamburger-mobile {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -478,21 +474,21 @@ li {
     box-sizing: border-box;
   }
 
-  .section-1 {
+  .section-1-mobile {
     display: flex;
     flex-direction: column;
   }
 
-  .section-1 a {
+  .section-1-mobile a {
     margin: 10px 0;
     transition: color 0.3s ease;
   }
 
-  .section-1 a:hover {
+  .section-1-mobile a:hover {
     color: gray;
   }
 
-  .shop-protein-popcorn-angle {
+  .shop-protein-popcorn-angle-mobile {
     font-family: var(--main-font);
     display: flex;
     justify-content: space-between;
@@ -501,33 +497,46 @@ li {
     transition: color 0.3s ease;
   }
 
-  .shop-protein-popcorn-angle:hover {
+  .shop-protein-popcorn-angle-mobile:hover {
     color: gray;
   }
-  .shop-protein-popcorn-list {
+  /* SHOP PROTEIN LIST */
+
+  .shop-protein-popcorn-list-mobile {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
+    inset: 0;
     background: #fff;
-    transform: translateX(100%);
-    transition: trasform 0.4s ease;
+    transform: translateY(100%);
+    pointer-events: none;
+    transition: transform 0.2s ease;
     z-index: 1000;
   }
 
-  .diveder {
+  .shop-protein-popcorn-list-mobile.open-shop-mobile {
+    margin: 10px 30px;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .back-and-close-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+
+  .diveder-mobile {
     margin: 20px 0;
     background-color: var(--main-color);
     padding: 0.6px 20px;
   }
 
-  .section-2 a {
+  .section-2-mobile a {
     margin: 10px 0;
     transition: color 0.3s ease;
   }
 
-  .section-2 a:hover {
+  .section-2-mobile a:hover {
     color: gray;
   }
 }
