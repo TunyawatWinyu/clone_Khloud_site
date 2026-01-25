@@ -219,9 +219,17 @@ li {
 }
 
 /* header-actions */
-
+.header-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .header-actions a {
-  margin-right: 30px;
+  margin-right: 20px;
+}
+.header-actions p {
+  font-family: var(--main-font);
+  color: var(--main-color);
 }
 
 /* ----------------------------------------- */
@@ -281,7 +289,6 @@ li {
     width: 30%;
     height: 100%;
     background: #fff;
-
     transform: translateX(-100%);
     transition: transform 0.2s ease;
     z-index: 1000;

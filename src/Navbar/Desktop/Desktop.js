@@ -12,9 +12,32 @@ import {
   faAngleRight,
   faAngleLeft,
 } from "@fortawesome/free-solid-svg-icons";
+import "../Desktop/Desktop.css";
 
-export default function Desktop() {
+export default function Desktop({
+  qtyProduct,
+  setQtyProduct,
+  product,
+  cart,
+  onUpdateCartQty,
+}) {
   const [isHovered, setIsHovered] = useState(true);
+  const [cartOpen, setCartOpen] = useState(false);
+
+  const TotalPrice = (cart) => {
+    let totale = 0;
+    cart.map((p) => (totale = totale + p.price * p.qty));
+    const rounded = Math.round(totale * 100) / 100;
+    return rounded;
+  };
+
+  const TotaleProductCart = (cart) => {
+    let TotaleProduct = 0;
+    cart.map((p) => (TotaleProduct = TotaleProduct + p.qty));
+
+    return TotaleProduct;
+  };
+
   return (
     <>
       {/* Desktop */}
@@ -92,12 +115,58 @@ export default function Desktop() {
           <a href="#">
             <FontAwesomeIcon style={{ fontSize: "1.5rem" }} icon={faUser} />
           </a>
-          <a href="#">
+          <a className="cartP" href="#" onClick={() => setCartOpen(!cartOpen)}>
             <FontAwesomeIcon
               style={{ fontSize: "1.5rem" }}
               icon={faCartShopping}
             />
           </a>
+          <p>{TotaleProductCart(cart)}</p>
+
+          <div className={`cart ${cartOpen ? "open-cart" : ""}`}>
+            <ul>
+              {cart.map((el) => {
+                const price = el.price * el.qty;
+
+                return (
+                  <>
+                    <li key={el.id}>
+                      <div className="product-cart">
+                        <div className="left-side">
+                          <img src={el.imgBase} alt={el.title} />
+                          <p>{el.title}</p>
+                        </div>
+                        <div className="right-side">
+                          <p>{Math.round(price * 100) / 100}$</p>
+                          <input
+                            type="number"
+                            min="0"
+                            value={el.qty}
+                            onChange={(e) => {
+                              const value = Number(e.target.value);
+                              onUpdateCartQty(
+                                el.id,
+                                Number.isNaN(value) ? 1 : value,
+                              );
+                            }}
+                          />
+                        </div>
+                      </div>
+                    </li>
+                    <div className="divider"></div>
+                  </>
+                );
+              })}
+            </ul>
+            <div className="total-in-cart">
+              <h3>
+                Totale: <span>{TotalPrice(cart)}$</span>
+              </h3>
+            </div>
+            <div className="toCheckOut">
+              <button className="btn">CheckOut</button>
+            </div>
+          </div>
         </div>
       </nav>
     </>

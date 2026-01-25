@@ -41,7 +41,52 @@ const imageLogos = [
   },
 ];
 
-export default function Main() {
+const storeLogos = [
+  {
+    id: "target sky blue",
+    src: "https://khloudfoods.com/cdn/shop/files/target_sky_blue.svg?v=1747169245&width=4",
+    alt: "target sky blue",
+    style: "60px",
+  },
+  {
+    id: "Kroger",
+    src: "https://khloudfoods.com/cdn/shop/files/Kroger_Freshcart_Logo.png?v=1764106168&width=900",
+    alt: "Kroger",
+    style: "150px",
+  },
+  {
+    id: "WMT",
+    src: "https://khloudfoods.com/cdn/shop/files/WMT_Wordmark_True_Blue.png?v=1764106210&width=900",
+    alt: "WMT",
+    style: "150px",
+  },
+  {
+    id: "Albertsons",
+    src: "https://khloudfoods.com/cdn/shop/files/Albertsons_Blue_Logo.png?v=1764106183&width=900",
+    alt: "Albertsons",
+    style: "150px",
+  },
+  {
+    id: "Sprouts",
+    src: "https://khloudfoods.com/cdn/shop/files/Sprouts_Farmers_Market_Logo_skyblue.png?v=1747169472&width=900",
+    alt: "Sprouts",
+    style: "150px",
+  },
+  {
+    id: "Wegmans",
+    src: "https://khloudfoods.com/cdn/shop/files/Wegmans_Store_Icon_54a12906-6f1f-4a2c-9c84-fbabdf32d0d8.png?v=1764106200&width=900",
+    alt: "Wegmans",
+    style: "150px",
+  },
+  {
+    id: "Gelson",
+    src: "https://khloudfoods.com/cdn/shop/files/Gelson_s_Markets_id1RtCCqOf_0.svg?v=1767905885&width=900",
+    alt: "Gelson",
+    style: "150px",
+  },
+];
+
+export default function Main({ qtyProduct, product, onAddProductToCart }) {
   return (
     <div className="main">
       <div className="introduction-product">
@@ -80,7 +125,11 @@ export default function Main() {
       </div>
 
       {/* ProductChoose */}
-      <ProductChoose />
+      <ProductChoose
+        product={product}
+        onAddProductToCart={onAddProductToCart}
+        qtyProduct={qtyProduct}
+      />
       <div className="brand-value">
         <div className="brand-value-img">
           <img
@@ -114,41 +163,16 @@ export default function Main() {
         <a className="button button-find-store">FIND A STORE NEAR YOU</a>
       </div>
       <div className="logo-store">
-        <img
-          style={{ width: "60px" }}
-          src="https://khloudfoods.com/cdn/shop/files/target_sky_blue.svg?v=1747169245&width=4"
-          alt="target sky blue"
-        />
-        <img
-          style={{ width: "150px" }}
-          src="https://khloudfoods.com/cdn/shop/files/Kroger_Freshcart_Logo.png?v=1764106168&width=900"
-          alt="Kroger"
-        />
-        <img
-          style={{ width: "150px" }}
-          src="https://khloudfoods.com/cdn/shop/files/WMT_Wordmark_True_Blue.png?v=1764106210&width=900"
-          alt="WMT"
-        />
-        <img
-          style={{ width: "150px" }}
-          src="https://khloudfoods.com/cdn/shop/files/Albertsons_Blue_Logo.png?v=1764106183&width=900"
-          alt="Albertsons"
-        />
-        <img
-          style={{ width: "150px" }}
-          src="https://khloudfoods.com/cdn/shop/files/Sprouts_Farmers_Market_Logo_skyblue.png?v=1747169472&width=900"
-          alt="Sprouts"
-        />
-        <img
-          style={{ width: "150px" }}
-          src="https://khloudfoods.com/cdn/shop/files/Wegmans_Store_Icon_54a12906-6f1f-4a2c-9c84-fbabdf32d0d8.png?v=1764106200&width=900"
-          alt="Wegmans"
-        />
-        <img
-          style={{ width: "150px" }}
-          src="https://khloudfoods.com/cdn/shop/files/Gelson_s_Markets_id1RtCCqOf_0.svg?v=1767905885&width=900"
-          alt="Gelson"
-        />
+        {storeLogos.map((img) => {
+          return (
+            <img
+              style={{ width: `${img.style}` }}
+              src={img.src}
+              alt={img.alt}
+              href={img.href}
+            />
+          );
+        })}
       </div>
 
       {/* snacking-is-looking-up */}

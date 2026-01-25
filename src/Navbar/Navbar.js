@@ -4,7 +4,13 @@ import Desktop from "./Desktop/Desktop";
 
 import "./navbar.css";
 
-export default function Navbar() {
+export default function Navbar({
+  qtyProduct,
+  setQtyProduct,
+  product,
+  cart,
+  onUpdateCartQty,
+}) {
   return (
     <>
       <div className="top-nav">
@@ -16,7 +22,13 @@ export default function Navbar() {
 
       <Mobile />
       <Tablet />
-      <Desktop />
+      <Desktop
+        qtyProduct={qtyProduct}
+        setQtyProduct={setQtyProduct}
+        product={product}
+        cart={cart}
+        onUpdateCartQty={onUpdateCartQty}
+      />
     </>
   );
 }
